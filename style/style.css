@@ -1,0 +1,44 @@
+html{
+    scroll-behavior: smooth;
+    padding: 0;
+}
+body{
+    padding: 0;
+    margin: 0;
+}
+.sideNav{
+    position: fixed;
+    height:100vh;
+    transition: width .5s;
+    background-color: #2dd4bf;
+    padding: 20px;
+    
+}
+
+
+.nav-item{
+    display: flex;
+    flex-direction: row;
+    font-weight: bold;
+    gap: 10px ; 
+    padding: 5px;
+}
+.nav-item:hover{
+
+    border-radius: 5%;
+    font-weight: bolder;
+    background-color: #28b6a3;
+    box-shadow: 0 5px 50px  rgb(231, 231, 231);
+    cursor: pointer;
+}
+.icon{
+    width: 30px;
+    height: 30px;
+   
+}
+.nav-item-text{
+    display: none;
+    transition:  2s ease-out;
+    align-self: center;
+    color:white;
+}
