@@ -48,3 +48,13 @@ function showSlides(n) {
   slides[slideIndex - 1].style.display = "block";
   dots[slideIndex - 1].className += " active";
 }
+
+// display sideNav on menu icon click
+const navContainer = document.querySelector('.nav-container')
+const menu = document.querySelector('.menu')
+menu.addEventListener('click', ()=>{
+    if(navContainer.style.display==='none'){
+        return navContainer.style.display='block'
+    }
+    else return navContainer.style.display = 'none'
+})
