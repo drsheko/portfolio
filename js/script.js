@@ -3,17 +3,48 @@ const sideNav = document.querySelector('.sideNav')
     sideNav.addEventListener('mouseout',hideNavNames)
 function displayNavNames  (){
     var navItemText = document.querySelectorAll('.nav-item-text')
-    navItemText.forEach(ele=>{sideNav.style.width='150px';ele.style.display='block'})
-    //console.log(sideNav.offsetWidth)
-   // const skills = document.querySelector('.skills')
-   // skills.style.marginLeft ='25%'
+    navItemText.forEach(
+        ele=>{
+            
+            ele.style.display='block'
+            
+            sideNav.style.width='150px';
+            
+            })
+    
 }
 function hideNavNames  (){
     var navItemText = document.querySelectorAll('.nav-item-text')
     navItemText.forEach(ele=>{sideNav.style.width='50px';
      ele.style.display='none'
    } )
-   //console.log(sideNav.offsetWidth)
-   //const skills = document.querySelector('.skills')
-   //skills.style.marginLeft =  '80px'
+   
+}
+
+var slideIndex = 1;
+showSlides(slideIndex);
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if(n > slides.length) {
+    slideIndex = 1
+  }
+  if(n < 1) {
+    slideIndex = slides.length
+  }
+  for(i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for(i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex - 1].style.display = "block";
+  dots[slideIndex - 1].className += " active";
 }

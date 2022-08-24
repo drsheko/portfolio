@@ -30,7 +30,7 @@ body{
     max-width: 100%;
     flex-grow: 1;
     min-height:100%;
-    transition: width 1s;
+    transition: width .5s;
     background-color: #2dd4bf;
     padding: 20px;
     z-index: 99;
@@ -61,13 +61,13 @@ body{
 }
 .nav-item-text{
     display: none;
-    transition:  2s ease-out;
+    transition: color 2s ease-out;
     align-self: center;
     color:white;
 }
 .content{
    
-    
+    width:80%;
     flex-grow: 7;
     overflow-y: scroll;
     padding: 20px  ;
@@ -111,27 +111,138 @@ body{
     margin:0 0 5px;
 }
 
-
-
-
-
-.contact{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    min-width: 100%;
+/* PROJECTS SECTION*/
+.projects{
+    width: 100%;
+    
+}
+.projects-container{
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 1rem;
+    padding: 3rem;
+    box-sizing: border-box;
+    width: 100%;
+    height: 90%;
+}
+.mySlides {
+    display: none;
+    width:100%;
+    height: 30rem;
+  }
+  img {
+    vertical-align: middle;
+  }
+  .slideshow-container {
+    min-width:100%;
+    max-width: 100%;
+    position: relative;
+    
+  }
+  
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  .prev:hover,
+  .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+ 
+ 
+  .projects-icons-container{
+    text-align: center;
+  }
+  /* The dots/bullets/indicators */
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #999999;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  .active,
+  .dot:hover {
+    background-color: #111111;
+  }
+  /* Fading animation */
+  .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  @-webkit-keyframes fade {
+    from {
+      opacity: .4
+    }
+    to {
+      opacity: 1
+    }
+  }
+  @keyframes fade {
+    from {
+      opacity: .4
+    }
+    to {
+      opacity: 1
+    }
   }
   
 
+  .custom{
+    display: flex;
+    flex-direction: row;
+    min-width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+  }
+  .customP{
+    background-color: #2dd4bf;
+    width: 40%;
+    padding: 1rem;
+  }
+  .project-image-container{
+  
+   width: 60% ;
+   height: 100%;   
+  }
+  .project-image{
+    width: 100% ;
+    height: 100%;
+    object-fit: fill;
+  }
+
+  /*CONTACT SECTION */
+.contact{
+    min-width: 100%;
+  }
+  
 .form {
     background-color: white;
-    width:100%;
     border-radius: 8px;
     padding: 20px 40px;
     box-shadow: 0 10px 25px rgba(92, 99, 105, .2);
   }
-  
   .title {
     font-size: 50px;
     margin-bottom: 50px;
@@ -144,7 +255,6 @@ body{
     margin-bottom: 17px;
   }
   
-
 .input {
     position: absolute;
     top: 0px;
@@ -213,9 +323,22 @@ textarea{
     transform: translateY(-2px);
   }
   
-
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+    .nav-container{
+        display: none;
+    }
+    .prev,
+    .next,
+    .text {
+      font-size: 11px
+    }
+  }
 
 @media only screen and (max-width: 600px) {
+    .nav-container{
+        display: none;
+    }
     .skills-container{
         display: grid;
         grid-template-columns: repeat(3,1fr);
