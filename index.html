@@ -1,181 +1,652 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style/style.css">
-    <script src="./js/script.js" defer></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="./style/style.css" />
     <title>Portfolio</title>
-</head>
-<body>
-    <!-- burger iconbutton-->
-    <div class="menu">
-        <i><img src="./style/images/icons/menu.png" alt=""></i>
-    </div>
-    <div class="nav-container">
-  <nav class="sideNav">
-    <a href="#"> <img src="./style/images/icons/account.png" alt=""> </a> 
-    
-    <div class="nav-item">
-        <img class="icon" src="./style/images/icons/home.png" alt="">
-        <span class="nav-item-text">Home</span>
-    </div>
-    <div class="nav-item">
-        <img class="icon" src="./style/images/icons/account.png" alt="">
-        <span class="nav-item-text">About</span>
-    </div>
-    <a class="nav-item" href="#skills-section">
-        <img class="icon" src="./style/images/icons/lightbulb-on.png" alt="">
-        <span class="nav-item-text">skills</span>
-    </a>
-    <a class="nav-item" href="#projects-section">
-        <img class="icon" src="./style/images/icons/clipboard-list.png" alt="">
-        <span class="nav-item-text">Projects</span>
-    </a>
-    <a class="nav-item" href="#contact-section">
-        <img class="icon" src="./style/images/icons/email.png" alt="">
-        <span class="nav-item-text">Contact</span>
-    </a>
-    
-    
-</nav>
-</div>
-<div class="content">
-    <div class="scroll">
-    <!-- SKILLS Section-->    
-    <section class="skills" id="skills-section">
-        <h2>__SKILLS</h2>
-        <div class="skills-container">
-            <div class="skill-item"> 
-                <img  class='skill-icon' src="./style/images/icons/css.png" alt="">
-                <p class="skill-name">css</p>
-            </div>
-            <div class="skill-item"> 
-                <img  class='skill-icon' src="./style/images/icons/api.png" alt="">
-                <p class="skill-name">REST API</p>
-            </div>
-            <div class="skill-item"> 
-                <img  class='skill-icon' src="./style/images/icons/git.png" alt="">
-                <p class="skill-name">git</p>
-            </div>
-            <div class="skill-item"> 
-                <img  class='skill-icon' src="./style/images/icons/github.png" alt="">
-                <p class="skill-name">github</p>
-            </div>
-            <div class="skill-item"> 
-                <img  class='skill-icon' src="./style/images/icons/html.png" alt="">
-                <p class="skill-name">HTML</p>
-            </div>
-            <div class="skill-item"> 
-                <img  class='skill-icon' src="./style/images/icons/javascript.png" alt="">
-                <p class="skill-name">Javascript</p>
-            </div>
-            <div class="skill-item"> 
-                <img  class='skill-icon' src="./style/images/icons/mongo.png" alt="">
-                <p class="skill-name">Mongodb</p>
-            </div>
-            <div class="skill-item"> 
-                <img  class='skill-icon' src="./style/images/icons/node.png" alt="">
-                <p class="skill-name">node js</p>
-            </div>
-            <div class="skill-item"> 
-                <img  class='skill-icon' src="./style/images/icons/npm.png" alt="">
-                <p class="skill-name">npm</p>
-            </div>
-            <div class="skill-item"> 
-                <img  class='skill-icon' src="./style/images/icons/postman.png" alt="">
-                <p class="skill-name">postman</p>
-            </div>
-            <div class="skill-item"> 
-                <img  class='skill-icon' src="./style/images/icons/react.png" alt="">
-                <p class="skill-name">React</p>
-            </div>
-            <div class="skill-item"> 
-                <img  class='skill-icon' src="./style/images/icons/sql.png" alt="">
-                <p class="skill-name">SQL</p>
-            </div>
-            <div class="skill-item"> 
-                <img  class='skill-icon' src="./style/images/icons/webpack.png" alt="">
-                <p class="skill-name">Webpack</p>
-            </div>
-            <div class="skill-item"> 
-                <img  class='skill-icon' src="./style/images/icons/visual-code.png" alt="">
-                <p class="skill-name">VS code</p>
-            </div>
-            
-            
-            
+  </head>
+  <body>
+    <header class="header">
+      <a href="#" class="logo"><img src="./style/images/personal/doctor avatar.png" width="34" height="34"/> Shady</a>
+      
+      
+      
+        
+      <nav class="navbar">
+        <a href="#home" class="active-link"><i class="bx bxs-home bx-tada"></i> Home</a>
+        <a href="#about"><i class="bx bxs-user-rectangle"></i> About</a>
+        <a href="#education"><i class="bx bxs-bulb"></i> Education</a>
+        <a href="#projects"><i class="bx bx-code-alt"></i> Projects</a>
+        <a href="#contact"><i class="bx bxs-envelope"></i> Contacts</a>
+      </nav>
+      <div class="switch-btn">
+        <div class="switch-btn-toggler ">
+         <i class="bx bxs-sun bx-tada"></i>
         </div>
+        </div>
+      <i class="bx bx-menu " id="menu-icon"></i>
+    </header>
     
-    </section>
-    <!--PROJECTS Section-->
-    <section class="projects" id="projects-section">
-        <h2>__PROJECTS</h2>
-        <div class="projects-container"> 
-            <div class="slideshow-container">
-                <div class="mySlides fade">
-                    <div class="custom">
-                        <div class="project-image-container">
-                            <img class="project-image" src="./style/images/projects/1.jpg" >
-                        </div>
-                        <div class="customP"> my describyion</div>
-                    </div>
-                </div>
-                <div class="mySlides fade">
-                    <div class="custom">
-                        <div class="project-image-container">
-                            <img class="project-image" src="./style/images/projects/2.webp" >
-                        </div>
-                       
-                        <div class="customP"> my describyion</div>
-                    </div>
-                </div>
-                <div class="mySlides fade">
-                    <div class="custom">
-                        <div class="project-image-container">
-                            <img class="project-image" src="./style/images/projects/3.webp" >
-                        </div>
-                        <div class="customP"> my describyio nddddddd  ddddddd dddddddddddd dddddd</div>
-                    </div>
-                </div>
-                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    <!--END OF NAVBAR-->
+    <!-- START OF SIDE NAVBAR-->
+    <div class="sidenavbar-container">
+      <div class="sidenavbar-logo-container">
+        <a href="#"> <img class='icon sidenavbar-logo' src="./style/images/personal/doctor avatar.png" alt="" /> </a>
+        <h2 class="sidenav-item-text">Shady Israel</h2>
+        <h3 > Full-Stack <span>Web Developer</span> </h3>
+      </div>
+      <div class="closs-sidenavbar bx bx-x">
+      </div>
+      <div class="sideNavbar"> 
+        <nav >
+          <a href="#home" class="sideNavbar-active btn tab"><i class="bx bxs-home bx-tada"></i> Home</a>
+          <a href="#about" class=" btn tab"><i class="bx bxs-user-rectangle"></i> About</a>
+          <a href="#education"class=" btn tab"><i class="bx bxs-bulb"></i> Education</a>
+          <a href="#projects"class=" btn tab"><i class="bx bx-code-alt"></i> Projects</a>
+          <a href="#contact"class=" btn tab"><i class="bx bxs-envelope"></i> Contacts</a>
+        </nav>   
+      </div>
+    </div>
+
+    <!--START OF CONTENT-->
+    <div class="content">
+      <div class="scroll">
+
+<section class="home" id="home">
+  <div class="home-content">
+    <h3>Hello, It's Me</h3>
+    <h1>Shady Israel</h1>
+    <h3>And I'm a <span class="my-text"></span></h3>
+    <p>An experienced mobile app developer who has a track record</p>
+    <div class="social-media">
+      <a href="#"><i class="bx bxl-facebook"></i> </a>
+      <a href="#"><i class="bx bxl-linkedin"></i></a>
+      <a href="#"><i class="bx bxl-twitter"></i></a>
+      <a href=""><i class="bx bxl-github"></i></a>
+    </div>
+   <a href="style\images\icons\Shady-Israel-resume.pdf" class="btn" download="Shady_Israel_Resume">Resume <i class='bx bx-download bx-tada'></i></a>
+  </div>
+  <div class="home-img">
+    <img src="./style/images/personal/avatar.png" alt="">
+  </div>
+</section>
+
+        <!--End of hero section-->
+        <!--Start of ABOUT section-->
+        <section class="about" id="about">
+          <h2 class="heading">About <span>Me</span></h2>
+          <div class="about-content">
+            <div class="about-left">
+              <div class="about-btn-container">
+                <div onclick="setAbout()" class=" btn tab active-tab about-tab">Who am I ?</div>
+                <div  onclick="setSkills()" class="btn tab skills-tab">Technical Skills</div>
+              </div>  
             </div>
-            <br>
-            <div class="projects-icons-container">
-                <span class="dot" onclick="currentSlide(1)"></span>
-                <span class="dot" onclick="currentSlide(2)"></span>
-                <span class="dot" onclick="currentSlide(3)"></span>
+            <div class="about-right">
+              <div class="about-whoami" id="about-whoami">
+              <h3>Who <span>am I ?</span></h3>
+              <p>
+                Hello! I'm Shady, a physician from Egypt.
+                I have been practicing medicine for several years, I have decided to switch careers and become a web developer. I have always had an interest in technology and have been teaching myself to code in my spare time. I'm passionate about learning new skills and keeping up with the latest technological advancements. Although I have enjoyed practicing medicine, I feel that a career in web development will allow me to utilize my creativity and problem-solving skills in a different way. I'm excited about the prospect of joining the tech industry and  eager to embark on this new journey.
+
+              </p>
+              
+              <a href="#" class="btn">Read More</a>
+            </div >
+            <div class="skills-content-container" id="about-skills">
+              <div class="skills-container" >
+                <div class="skill-item ">
+                  <img
+                    class="skill-icon"
+                    src="./style/images/icons/html.png"
+                    alt=""
+                  />
+                  <p class="skill-name">HTML</p>
+                </div>
+                <div class="skill-item ">
+                  <img
+                    class="skill-icon"
+                    src="./style/images/icons/css.png"
+                    alt=""
+                  />
+                  <p class="skill-name">CSS</p>
+                </div>
+                <div class="skill-item">
+                  <img
+                    class="skill-icon"
+                    src="./style/images/icons/javascript.png"
+                    alt=""
+                  />
+                  <p class="skill-name">Javascript</p>
+                </div>
+                
+                <div class="skill-item">
+                  <img
+                    class="skill-icon"
+                    src="./style/images/icons/typescript.png"
+                    alt=""
+                  />
+                  <p class="skill-name">Typescript</p>
+                </div>
+                <div class="skill-item">
+                  <img
+                    class="skill-icon"
+                    src="./style/images/icons/react.png"
+                    alt=""
+                  />
+                  <p class="skill-name">React</p>
+                </div>
+                <div class="skill-item">
+                  <img
+                    class="skill-icon"
+                    src="./style/images/icons/java.png"
+                    alt=""
+                  />
+                  <p class="skill-name">JAVA</p>
+                </div>
+                <div class="skill-item">
+                  <img
+                    class="skill-icon"
+                    src="./style/images/icons/node-js.webp"
+                    alt=""
+                  />
+                  <p class="skill-name">Node js</p>
+                </div>
+                <div class="skill-item">
+                  <img
+                    class="skill-icon"
+                    src="./style/images/icons/python.png"
+                    alt=""
+                  />
+                  <p class="skill-name">Python</p>
+                </div>
+  
+                <div class="skill-item">
+                  <img
+                    class="skill-icon"
+                    src="./style/images/icons/mongo.png"
+                    alt=""
+                  />
+                  <p class="skill-name">Mongodb</p>
+                </div>
+                <div class="skill-item">
+                  <img
+                    class="skill-icon"
+                    src="./style/images/icons/mysql.png"
+                    alt=""
+                  />
+                  <p class="skill-name">MySQL</p>
+                </div>
+                <div class="skill-item">
+                  <img
+                    class="skill-icon"
+                    src="./style/images/icons/sql.png"
+                    alt=""
+                  />
+                  <p class="skill-name">SQL</p>
+                </div>
+                <div class="skill-item">
+                  <img
+                    class="skill-icon"
+                    src="./style/images/icons/postgresql.png"
+                    alt=""
+                  />
+                  <p class="skill-name">PostgreSQL</p>
+                </div>
+                <div class="skill-item">
+                  <img
+                    class="skill-icon"
+                    src="./style/images/icons/api.png"
+                    alt=""
+                  />
+                  <p class="skill-name">REST API</p>
+                </div>
+               
+                
+                <div class="skill-item">
+                  <img
+                    class="skill-icon"
+                    src="./style/images/icons/firebase.png"
+                    alt=""
+                  />
+                  <p class="skill-name">Firebase</p>
+                </div> 
+                <div class="skill-item">
+                  <img
+                    class="skill-icon"
+                    src="./style/images/icons/docker.png"
+                    alt=""
+                  />
+                  <p class="skill-name">Docker</p>
+                </div>
+                <div class="skill-item a">
+                  <img
+                    class="skill-icon"
+                    src="./style/images/icons/webpack.png"
+                    alt=""
+                  />
+                  <p class="skill-name">Webpack</p>
+                </div>
+                <div class="skill-item">
+                  <img
+                    class="skill-icon"
+                    src="./style/images/icons/git.png"
+                    alt=""
+                  />
+                  <p class="skill-name">git</p>
+                </div>
+                <div class="skill-item">
+                  <img
+                    class="skill-icon"
+                    src="./style/images/icons/github.png"
+                    alt=""
+                  />
+                  <p class="skill-name">github</p>
+                </div>
+                <div class="skill-item">
+                  <img
+                    class="skill-icon"
+                    src="./style/images/icons/postman.png"
+                    alt=""
+                  />
+                  <p class="skill-name">postman</p>
+                </div>
+                <div class="skill-item a">
+                  <img
+                    class="skill-icon "
+                    src="./style/images/icons/visual-code.png"
+                    alt=""
+                  />
+                  <p class="skill-name">VS code</p>
+                </div>
+              </div>
             </div>
-          </div>
-    </section>
-    <!-- CONTACT Section-->
-    <section class="contact" id="contact-section">
-        <h2>__Contact</h2>
-        <form action="" class="form">
-            <h1 class="title">Contact me</h1>
+            </div>
             
+          </div>
+        </section>
+        
+        <!-- EDUCATION Section-->
+        <section class="education" id="education">
+          <h2 class="heading"><span>My </span> Education</h2>
+          <div class="education-container">
+            <div class="graduation-container">
+              <h2 class="heading"><span>My </span> Degrees</h2>
+              <div class=" graduation-item">
+                <div class="graduation-left">
+                  <i class='bx bxs-graduation bx-tada-hover graduation-icon' ></i>
+                  <div class="graduation-divider"></div>
+                </div>
+                <div class="graduation-right">
+                  <span class="graduation-year">November 2024</span>
+                  <h3>Bachelor of Science in <span>Computer Science</span> </h3>
+                  <p> Western Governors University (WGU)</p>
+                </div>    
+              </div>
+
+              <div class="box graduation-item">
+                <div class="graduation-left">
+                  <i class='bx bxs-graduation bx-tada-hover graduation-icon' ></i>
+                  <div class="graduation-divider"></div>
+                </div>
+                <div class="graduation-right">
+                  <span class="graduation-year">September 2023</span>
+                  <h3> Full Stack  <span>Web Development </span>Bootcamp </h3>
+                  <p>  The Odin Project Bootcamp </p>
+                </div>  
+              </div>
+
+              <div class=" graduation-item">
+                <div class="graduation-left">
+                  <i class='bx bxs-graduation bx-tada-hover graduation-icon ' ></i>
+                  <div class="graduation-divider"></div>
+                </div>
+                <div class="graduation-right">
+                  <span class="graduation-year">December 2014</span>
+                  <h3> Doctor of   <span>Medicine and Surgery </span> (MD) </h3>
+                  <p>   Faculty Of Medicine - Minia University, Egypt </p>
+                </div>  
+              </div>
+            </div>
+            <div class="certifications-container">
+              <h2 class="heading"><span>My </span> Certifications</h2>
+              <div class=" certifications-item">
+                <div class="certifications-left">
+                  <i class='bx bxs-award bx-tada-hover certifications-icon' ></i>
+                  <div class="certifications-divider"></div>
+                </div>
+                <div class="certifications-right">
+                  <h3>ITIL 4 Foundation Certificate in  <span>IT Service Management</span> </h3>
+                  <p>  PeopleCert (AXELOS)</p>
+                </div>    
+              </div>
+              
+              <div class=" certifications-item">
+                <div class="certifications-left">
+                  <i class='bx bxs-award bx-tada-hover certifications-icon' ></i>
+                  <div class="certifications-divider"></div>
+                </div>
+                <div class="certifications-right">
+                  <h3>The   <span>Linux Essentials</span> certificate </h3>
+                  <p>  Linux Professional Institute</p>
+                </div>    
+              </div>
+              
+            </div>
+        </section>
+   
+        <!-----------------------------------------------------PROJECTS Section------------------------------------------->
+        <section class="projects" id="projects">
+          <h2 class="heading">PROJECTS</h2>
+          <div class="projects-container">
+            <!--------------------------------------------Vaporesta Project Section-------------------------------------------->
+            <div class="project project-1">
+              <div class="project-content">
+                <h2>Shady Business <span>VAPORESTA</span></h2>
+                <ul > Features :
+                  <li>Responsive Design ensures accessibility on all devices.</li>
+                  <li>Secure registration/ login with JWT authentication.</li>
+                  <li>Product Pages: descriptions/ pricing/ images.</li>
+                  <li>Product Reviews: Ratings/ Comments/ Multimedia support.</li>
+                  <li>Dynamic Shopping Cart: Add/ Update/ Remove items.</li>
+                  <li>Checkout with Coupons & Discounts support.</li>
+                  <li>Admin Dashboard: Manage products/ orders/ coupons.</li>
+                </ul>
+                <div class="project-stack">
+                  <div class="stack-item">
+                    <img
+                      src="./style/images/icons/react.png"
+                    />
+                    <p>React</p>
+                  </div>
+                  <div class="stack-item">
+                    <img
+                    src="./style/images/icons/npm.png"
+                    />
+                    <p >Node js</p>
+                  </div>
+                  <div class="stack-item">
+                    <img
+                    src="./style/images/icons/mongo.png"
+                    />
+                    <p >Mongodb</p>
+                  </div>
+                  <div class="stack-item">
+                    <img
+                      src="./style/images/icons/firebase.png"
+                    />
+                    <p >Firebase</p>
+                  </div>
+                  <div class="stack-item">
+                    <img
+                    src="./style/images/icons/api.png"
+                    />
+                    <p >REST AP</p>
+                  </div>
+                  <div class="stack-item">
+                    <img
+                    src="./style/images/icons/postman.png"
+                    />
+                    <p >Postman</p>
+                  </div>
+                </div>
+                <div class="project-btns">
+                  <button class="btn"><a href="https://vaporesta.onrender.com/" target="_blank" class="btn-link">Live demo</a></button>
+                  <button class="btn"><a href="https://github.com/drsheko/Shady-business" target="_blank" class="btn-link">View Code</a></button>
+                </div>
+              </div>
+              <div class="slideshow-container">
+                <div class="slideshow-container">
+                <div class="mySlides fade project-1-slide">
+                  <div class="custom">
+                    <div class="flip-card" >
+                      <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                          <img class="project-image" src="./style/images/projects/2.webp">
+                        </div>
+                        <div class="flip-card-back">
+                          <h3>Whoaaa!!!</h3> 
+                          <div>ssssssssssssss</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="mySlides fade project-1-slide" >
+                  <div class="custom">
+                   
+                      <div class="flip-card" >
+                        <div class="flip-card-inner">
+                          <div class="flip-card-front">
+                            <img class="project-image" src="./style/images/projects/3.webp">
+                          </div>
+                          <div class="flip-card-back">
+                            <h3>Whoaaa!!!</h3> 
+                            <div>ssssssssssssss</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+                <div class="mySlides fade project-1-slide">
+                  <div class="custom">
+                    <div class="flip-card" >
+                      <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                          <img class="project-image" src="./style/images/projects/1.jpg">
+                        </div>
+                        <div class="flip-card-back">
+                          <h3>Whoaaa!!!</h3> 
+                          <div>ssssssssssssss</div>
+                        </div>
+                      </div>
+                    </div>
+                   
+                  </div>
+                </div>
+                <a class="prev" onclick="plusSlides(-1,1)">&#10094;</i></a>
+                <a class="next" onclick="plusSlides(1,1)">&#10095;</a>
+                <br />
+              </div>
+              <div class="dot-container">
+                
+                <span class="dot project-1-dot" onclick="currentSlide(1,1)"></span>
+                <span class="dot project-1-dot" onclick="currentSlide(2,1)"></span>
+                <span class="dot project-1-dot" onclick="currentSlide(3,1)"></span>
+                
+              </div>
+            
+              </div>
+              
+            </div>
+            <div class="project-divider"></div>
+
+            <div class="project project-2">
+              <div class="project-content">
+                <h2>Real time <span>Chat App</span></h2>
+                <ul > Features :
+                  
+                  <li>Real-time text messaging with Socket.IO .</li>
+                  <li>Emoji Support for enriched experience.</li>
+                  <li>Support Media Sharing.</li>
+                  <li>Support Voice Messages.</li>
+                  <li>Real-timeAudio/Video Calls using WebRTC.</li>
+                  <li>Account Creation & Secure Login.</li>
+                </ul>
+                <div class="project-stack">
+                  <div class="stack-item">
+                    <img
+                      src="./style/images/icons/react.png"
+                    />
+                    <p>React</p>
+                  </div>
+                  <div class="stack-item">
+                    <img
+                      src="./style/images/icons/mui.png"
+                    />
+                    <p>MUI</p>
+                  </div>
+                  <div class="stack-item">
+                    <img
+                    src="./style/images/icons/npm.png"
+                    />
+                    <p >Node js</p>
+                  </div>
+                  <div class="stack-item">
+                    <img
+                    src="./style/images/icons/mongo.png"
+                    />
+                    <p >Mongodb</p>
+                  </div>
+                  <div class="stack-item">
+                    <img
+                      src="./style/images/icons/firebase.png"
+                    />
+                    <p >Firebase</p>
+                  </div>
+                  <div class="stack-item">
+                    <img
+                    src="./style/images/icons/api.png"
+                    />
+                    <p >REST AP</p>
+                  </div>
+                </div>
+                <div class="project-btns">
+                  <button class="btn">Live demo</button>
+                  <button class="btn">view code</button>
+                </div>
+              </div>
+              <div class="slideshow-container">
+                <div class="slideshow-container">
+                  <div class="mySlides fade project-2-slide">
+                    <div class="custom">
+                      <div class="flip-card" >
+                        <div class="flip-card-inner">
+                          <div class="flip-card-front">
+                            <img class="project-image" src="./style/images/projects/2.webp">
+                          </div>
+                          <div class="flip-card-back">
+                            <h3>Whoaaa!!!</h3> 
+                            <div>ssssssssssssss</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="mySlides fade project-2-slide" >
+                    <div class="custom">
+                     
+                        <div class="flip-card" >
+                          <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                              <img class="project-image" src="./style/images/projects/3.webp">
+                            </div>
+                            <div class="flip-card-back">
+                              <h3>Whoaaa!!!</h3> 
+                              <div>ssssssssssssss</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+                  <div class="mySlides fade project-2-slide">
+                    <div class="custom">
+                      <div class="flip-card" >
+                        <div class="flip-card-inner">
+                          <div class="flip-card-front">
+                            <img class="project-image" src="./style/images/projects/1.jpg">
+                          </div>
+                          <div class="flip-card-back">
+                            <h3>Whoaaa!!!</h3> 
+                            <div>ssssssssssssss</div>
+                          </div>
+                        </div>
+                      </div>
+                     
+                    </div>
+                  </div>
+                <a class="prev" onclick="plusSlides(-1,2)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1,2)">&#10095;</a>
+                <br />
+              <div class="dot-container">
+                <span class="dot project-2-dot" onclick="currentSlide(1,2)"></span>
+                <span class="dot project-2-dot" onclick="currentSlide(2,2)"></span>
+                <span class="dot project-2-dot" onclick="currentSlide(3,2)"></span>
+              </div>
+              </div>
+              
+            </div>
+            </div>
+
+        </section>
+        <!-- CONTACT Section-->
+        <section class="contact" id="contact">
+          <h2 class="heading">Contact <span>Me</span></h2>
+          <div class="contact-content">
+
+          
+          <form action="" class="form">
+            <h1 class="title">Shoot  <span>Me</span> a message</h1>
+
             <div class="inputContainer">
-                <input type="text" class="input" placeholder="a" required> 
-                <label for="" class="label">Name</label>
+              <input type="text" class="input" placeholder="a" required />
+              <label for="" class="label">Name</label>
             </div>
             <div class="inputContainer">
-              <input type="email" class="input" placeholder="a" required>
+              <input type="email" class="input" placeholder="a" required />
               <label for="" class="label">Email</label>
             </div>
-            <div class="inputContainer">
-                <textarea name="message" id="" class="input" placeholder="a" cols="30" rows="10" required></textarea>
-                <label for="" class="label">Message</label>
+            <div class="inputContainer textareaContainer">
+              <textarea
+                name="message"
+                id=""
+                class="input"
+                placeholder="a"
+                required
+              ></textarea>
+              <label for="" class="label">Message</label>
             </div>
-            
-            <input type="submit" class="submitBtn" >
-          </form>
 
-    </section>
+            <button type="submit" class="btn" >Send <i class="bx bx-send bx-tada"></i></button>
+          </form>
+          <div class="contact-info-container">
+            <div class="contact-info">
+              <img src="" alt="">
+              <i class="bx bxs-phone bx-tada"></i>
+              <h2>Phone</h2>
+              <p>615-495-3482</p>
+            </div>
+            <div class="contact-info">
+              <img src="" alt="">
+              <i class="bx bxs-navigation bx-tada"></i>
+              <h2>Address</h2>
+              <p>12442 Old Hickery Blvd, 
+                <br>
+                Nashville ,Tn.</p>
+            </div>
+            <div class="contact-info">
+              <img src="" alt="">
+              <i class="bx bxs-envelope bx-tada"></i>
+              <h2>Email</h2>
+              <p>drsheko91@gmial.com</p>
+            </div>
+          </div>
+        </div>
+        </section>
+      </div>
     </div>
-    
-</div>
-  
-</body>
+    <footer>
+      
+    </footer>
+     <!-- Scroll reveal-->
+     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+  <script src="https://unpkg.com/scrollreveal"></script>
+<!--typed js-->
+<script src="./js/script.js" ></script>
+
+  </body>
 </html>

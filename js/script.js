@@ -1,60 +1,196 @@
-const sideNav = document.querySelector('.sideNav')
-    sideNav.addEventListener('mouseover',displayNavNames)
-    sideNav.addEventListener('mouseout',hideNavNames)
-function displayNavNames  (){
-    var navItemText = document.querySelectorAll('.nav-item-text')
-    navItemText.forEach(
-        ele=>{
-            
-            ele.style.display='block'
-            
-            sideNav.style.width='150px';
-            
-            })
-    
-}
-function hideNavNames  (){
-    var navItemText = document.querySelectorAll('.nav-item-text')
-    navItemText.forEach(ele=>{sideNav.style.width='50px';
-     ele.style.display='none'
-   } )
-   
-}
+// scroll reveal   
+ScrollReveal({ 
+  reset: true ,
+  duration:3000,
+  delay:200 , 
+  
+});
+ScrollReveal().reveal('.home-content', {origin:'top', distance:'500px'});
+ScrollReveal().reveal('.home-img', {origin:'right', delay:900 , duration:1700,distance:'500px'});
+ScrollReveal().reveal('.navbar , .switch-btn , #menu-icon', {origin:'right', distance:'300px', delay:50, reset:false, container:'header'});
+//ScrollReveal().reveal(' .switch-btn ', {origin:'right', distance:'300px', delay:0, reset:false, container:'header'});
+//ScrollReveal().reveal('#menu-icon ', {opacity:0,delay:1000, reset:false, container:'header'});
+ScrollReveal().reveal('.logo ', {origin:'left', distance:'50px', delay:50 , reset:false,container:'header' });
+ScrollReveal().reveal('.heading', {origin:'top', distance:'100px', duration:1500 });
+ScrollReveal().reveal('.about-img', { opacity:0,delay:0, duration:4500});
+ScrollReveal().reveal('.about-right', { origin:'bottom', distance:'100px', duration:1500});
+ScrollReveal().reveal('.contact-info-container', { origin:'right',delay:0, distance:'100px', duration:2000});
 
-var slideIndex = 1;
-showSlides(slideIndex);
-function plusSlides(n) {
-  showSlides(slideIndex += n);
+
+// Grid animation
+ for(let i=1; i<=16 ; i++){
+  let delay = (i*80)
+ // ScrollReveal().reveal('.skills-container div:nth-of-type('+i+')',{  scale:1.3, duration:250, delay:delay,reset:true} );
+ }
+ 
+// =======typed 
+var typed = new Typed('.my-text', {
+  strings:[
+    'Web Developer',
+    'React Developer', 
+    'Full-Stack Developer'
+  ],
+  startDelay:1200,
+  typeSpeed:100,
+  backSpeed:100,
+  backDelay:2000,
+  loop:2
+})
+let sections =document.querySelectorAll('section');
+let navLinks = document.querySelectorAll('header nav a');
+let sideLinks = document.querySelectorAll('.sideNavbar nav a');
+
+// elevate navbar with scrolling down
+const navbar = document.querySelector(".nav-container");
+window.onscroll = function () {
+  sections.forEach(sec => {
+    let top = window.scrollY;
+    let offset = sec.offsetTop - 150;
+    let height = sec.offsetHeight;
+    let id = sec.getAttribute('id') ;
+    if(top >= offset && top < offset + height) {
+      navLinks.forEach(link =>  {
+        link.classList.remove('active-link');  
+        link.firstElementChild.classList.remove('bx-tada');
+        document.querySelector( 'header nav a[href*='+ id +']').classList.add( 'active-link');
+        document.querySelector( '.header nav a[href*='+ id +'] i').classList.add( 'bx-tada');
+      });
+      sideLinks.forEach(link =>  {
+        link.classList.remove('sideNavbar-active');
+        link.firstElementChild.classList.remove('bx-tada')
+        document.querySelector( '.sideNavbar nav a[href*='+ id +']').classList.add( 'sideNavbar-active');
+        document.querySelector( '.sideNavbar nav a[href*='+ id +'] i').classList.add( 'bx-tada');
+      })
+    };
+  });
+
+  let navigationbar = document.querySelector('header');
+  navigationbar.classList.toggle('scrolled-navbar', window.scrollY > 100)
+ 
+  }
+
+
+  // ========Slider==========
+
+let slide_index = {"1":1 , "2":1};
+
+showSlides(1,1)
+showSlides(1 , 2);
+
+function plusSlides( n, projectId) {
+  
+  showSlides(  slide_index[projectId] += n, projectId);
 }
-function currentSlide(n) {
-  showSlides(slideIndex = n);
+function currentSlide(n, projectId) {
+  slide_index[projectId] =n
+  showSlides( n, projectId);
 }
-function showSlides(n) {
+function showSlides(n,projectId) {
   var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("dot");
+  var slides = document.querySelectorAll(`.project-${projectId}-slide`);
+  var dots = document.querySelectorAll(`.project-${projectId}-dot`);
   if(n > slides.length) {
-    slideIndex = 1
+    slide_index[projectId] =1 ;
   }
   if(n < 1) {
-    slideIndex = slides.length
+    slide_index[projectId] =slides.length ;
   }
   for(i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
   }
   for(i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
+    dots[i].className = dots[i].className.replace(" dot-active", "");
   }
-  slides[slideIndex - 1].style.display = "block";
-  dots[slideIndex - 1].className += " active";
+  slides[slide_index[projectId]-1 ].style.display = "block";
+  dots[slide_index[projectId]-1].className += " dot-active";
 }
 
-// display sideNav on menu icon click
-const navContainer = document.querySelector('.nav-container')
-const menu = document.querySelector('.menu')
-menu.addEventListener('click', ()=>{
-    if(navContainer.style.display==='none'){
-        return navContainer.style.display='block'
-    }
-    else return navContainer.style.display = 'none'
+
+
+// show sideNav + hide top nav 
+const hamburgerMenu = document.querySelector('#menu-icon');
+const sideNavbar = document.querySelector('.sidenavbar-container');
+function showSideNavbar(){
+  //hamburgerMenu.style.display='none';
+  sideNavbar.classList.remove('fadeOutLeft')
+  sideNavbar.classList.add('bounceInLeft')
+  sideNavbar.style.display='flex';
+ // hamburgerMenu.style.display='none'
+ hamburgerMenu.classList.toggle('bx-menu')
+}
+hamburgerMenu.addEventListener('click', showSideNavbar);
+
+// hide sideNav + show top nav 
+const sideNavbarCloseBtn = document.querySelector('.closs-sidenavbar');
+sideNavbarCloseBtn.addEventListener('click',hideSideNavbar );
+function hideSideNavbar() {
+  sideNavbar.classList.add('fadeOutLeft');
+
+ // hamburgerMenu.style.display='block ';
+
+ hamburgerMenu.classList.toggle('bx-menu')
+  
+}
+
+// hide sidenav when link chosed 
+
+sideLinks.forEach(link => {
+  link.addEventListener('click', hideSideNavbar)
 })
+
+const switcherBtn =document.querySelector('.switch-btn')
+const switcher = document.querySelector('.switch-btn-toggler');
+const switcherIcon = document.querySelector('.switch-btn-toggler i');
+var theme = 'dark' //default
+switcherBtn.addEventListener('click', ()=>{
+  
+  // switch icons
+  switcher.classList.toggle('switch-btn-toggler-active');
+  switcherIcon.classList.toggle('bxs-moon');
+  switcherIcon.classList.toggle('bxs-sun');
+  //switch theme
+  theme ==='dark' ? theme='light':theme='dark'
+   // switch colors to match theme
+   if(theme === 'light'){
+   // document.documentElement.style.setProperty('--main-color', '#0091ea');
+   document.documentElement.style.setProperty('--main-color', '#7843E9');
+    document.documentElement.style.setProperty('--bg-color','rgba(255, 255, 255, 1)');
+   // document.documentElement.style.setProperty('--second-bg-color','#F3F8FF');
+    document.documentElement.style.setProperty('--second-bg-color','#E6E6E6');
+    document.documentElement.style.setProperty('--text-color','#354259 ');
+   }else{
+    document.documentElement.style.setProperty('--main-color', '#32c766');
+    document.documentElement.style.setProperty('--bg-color','#1f242d');
+    document.documentElement.style.setProperty('--second-bg-color','#323946');
+    document.documentElement.style.setProperty('--text-color','#bababa');
+   }
+  
+})
+
+let display = document.getElementById('display');
+let about = document.querySelector("#about-whoami");
+let skills = document.querySelector("#about-skills");
+let aboutTab =  document.querySelector(".about-tab");
+let skillsTab = document.querySelector(".skills-tab");
+
+let setAbout =() =>{
+  aboutTab.classList.remove('active-tab');
+  skillsTab.classList.remove('active-tab');
+  aboutTab.classList.add('active-tab');
+  about.style.display="block";
+  skills.style.display="none";
+
+}
+let setSkills =() =>{
+  aboutTab.classList.remove('active-tab');
+  skillsTab.classList.remove('active-tab');
+  skillsTab.classList.add('active-tab');
+  skills.style.display="flex";
+  about.style.display="none";
+
+}
+
+
+
+
+
