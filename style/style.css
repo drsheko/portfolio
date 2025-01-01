@@ -402,10 +402,6 @@ width:  35vw;
     color: #DADCE0;
 }
 
-.sidenav-item:hover{
-
-}
-
 .nav-item-text{
      align-self: center;
 }
@@ -547,10 +543,6 @@ color: var(--bg-color) !important;
     scroll-behavior: smooth;
 
 }
-.scroll{
-    
-}
-
 
 /*============SKILLS-SECTION ==========*/
 .skills{
