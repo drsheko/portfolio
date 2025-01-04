@@ -42,6 +42,7 @@ body{
     background-color:var(--bg-color);
     font-family: "Poppins",sans-serif;  
     color:var(--text-color);  
+    overflow-x: hidden;
 }
 section{
   min-height: 100vh;
@@ -52,7 +53,7 @@ section{
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 100vw;
   padding: 2rem 9%;
   background-color: var(--bg-color);
   display: flex;
@@ -1049,7 +1050,7 @@ textarea{
   }
   @media (max-width:990px) {
     .header{
-      padding: 2rem 3%;
+      padding: 2rem 3rem;
     }
     #menu-icon{
       display: none;
