@@ -251,7 +251,10 @@ font-weight: 700;
 .btn.btn:active +.btn::after{
   opacity: 0;
 }
-
+.resume-btn{
+  padding: 1rem 8.5rem;
+  text-align: center;
+}
 .home-img img {
 width:  35vw;
 
@@ -684,7 +687,7 @@ box-shadow:
 }
 
 .graduation-right, .certifications-right{
-flex:1.8;
+flex:3;
 padding: .25rem .5rem;
 display: flex;
 flex-direction: column;
@@ -692,7 +695,7 @@ flex-direction: column;
 .graduation-year, .certifications-year{
 border-radius: 5rem;
 padding: 1px 3px;
-margin: .5rem 0;
+margin: .5rem 0 1rem;
 font-size: 1.6rem;
 font-weight: 700;
 text-align: center;
@@ -950,7 +953,7 @@ margin: .5rem 0 0;
     padding: 0 20px;
     outline: none;
     background: none;
-    z-index: 1;
+    z-index: 0;
     color:var(--text-color);
   }  
   ::placeholder {
@@ -1104,6 +1107,11 @@ textarea{
      }
      .about-img img{
       width: 45vw;
+     }
+     .resume-container{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
      }
      .about-btn-container{
       display: flex;
@@ -1662,4 +1670,97 @@ textarea{
   height: 100%;
   flex: 65%;
 }
+.modal{
+  position :fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background-color:transparent;
+  padding: 1rem;
+ 
+}
+.modal-window {
+ 
+  align-self: center;
+  height: fit-content;
+  width: fit-content;
+  border-radius: 5px;
+  z-index: 999;
+  visibility: visible;
+  opacity: 1;
+  transition: all 0.3s;
+ 
 
+}
+.modal-header{
+  background-color: var(--main-color);
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  padding: .75rem 1.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  z-index: 999;
+  box-shadow: 0 0.8rem 1rem rgba(0, 0, 0, 0.4),
+  0 -0.8rem 1rem rgba(0, 0, 0, 0.2) inset;
+}
+.modal-title{
+  font-size: 2.2rem;
+  color: var(--bg-color);
+}
+.modal-close{
+  color: var(--bg-color);
+  font-size: 3rem; 
+  font-weight: 800;
+  box-shadow:
+0 0.3rem 0.6rem rgba(0, 0, 0, 0.4),
+0 -0.3rem 0.6rem rgba(0, 0, 0, 0.2) inset;
+}
+.modal-close:hover{
+  color: var(--text-color);
+  cursor: pointer;
+}
+.modal-body{
+  background-color: var(--bg-color);
+  font-weight: 600;
+  padding: 2rem 1.5rem;
+font-size: 1.6rem;
+box-shadow:
+0 0.8rem 1rem rgba(0, 0, 0, 0.4),
+0 -0.8rem 1rem rgba(0, 0, 0, 0.2) inset;
+border-bottom-left-radius: 5px;
+border-bottom-right-radius: 5px;
+
+}
+.modal-body h4{
+ text-align:end;
+ margin:.5rem 1rem ;
+}
+
+/* footer Style */
+
+.footer {
+  background-color:var(--second-bg-color);
+  text-align: center;
+  padding: 2.6rem 0;
+  box-shadow:
+0 0.8rem 1rem rgba(0, 0, 0, 0.4),
+0 -0.8rem 1rem rgba(0, 0, 0, 0.2) inset;
+}
+
+.footer p {
+  color: var(--text-color);
+  font-weight: 400;
+  font-size: 1.6rem;
+  letter-spacing: 0.5px;
+}
+
+.footer a {
+  color:var(--main-color);
+  font-weight: 900;
+  
+}
