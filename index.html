@@ -6,16 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0 , shrink-to-fit=no" />
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   <link rel="stylesheet" href="./style/style.css" />
-  <title>Portfolio</title>
+  <title>SHADY</title>
 </head>
 
 <body>
   <header class="header">
-    <a href="#" class="logo"><img src="./style/images/personal/doctor avatar.png" width="34" height="34" /> Shady</a>
-
-
-
-
+    <a href="#" class="logo"><img src="./style/images/personal/personal-avatar.png" width="30" height="34" /><span>Shady</span> </a>
     <nav class="navbar">
       <a href="#home" class="active-link"><i class="bx bxs-home bx-tada"></i> Home</a>
       <a href="#about"><i class="bx bxs-user-rectangle"></i> About</a>
@@ -35,7 +31,7 @@
   <!-- START OF SIDE NAVBAR-->
   <div class="sidenavbar-container">
     <div class="sidenavbar-logo-container">
-      <a href="#"> <img class='icon sidenavbar-logo' src="./style/images/personal/doctor avatar.png" alt="" /> </a>
+      <a href="#"> <img class='icon sidenavbar-logo' id="sidenavbar-logo" src="./style/images/personal/dark-avatar-left.png" alt="" /> </a>
       <h2 class="sidenav-item-text">Shady Israel</h2>
       <h3> Full-Stack <span>Web Developer</span> </h3>
     </div>
@@ -60,24 +56,25 @@
         <div class="home-content">
           <h3>Hello, It's Me</h3>
           <h1>Shady Israel</h1>
-          <h3>And I'm a <span class="my-text"></span></h3>
-          <p>An experienced mobile app developer who has a track record</p>
+          <h4>And I'm a </h4> <br>
+          <h3><span class="my-text"></span></h3>
+          <p></p>
           <div class="social-media">
             <a href="#"><i class="bx bxl-facebook"></i> </a>
-            <a href="#"><i class="bx bxl-linkedin"></i></a>
+            <a href="https://www.linkedin.com/in/shady-israel-65047514b" target="_blank"><i class="bx bxl-linkedin"></i></a>
             <a href="#"><i class="bx bxl-twitter"></i></a>
-            <a href=""><i class="bx bxl-github"></i></a>
+            <a href="https://github.com/drsheko" target="_blank"><i class="bx bxl-github"></i></a>
           </div>
           <div class="resume-container">
-            <a href="style\images\icons\Shady-Israel-resume.pdf" class="btn resume-btn"
-              download="Shady_Israel_Resume">Resume <i class='bx bx-download bx-tada'></i></a>
+            <a href="/Shady-Israel-resume.pdf" class="btn resume-btn"
+              download="Shady_Israel_Resume">Resume <i class='bx bxs-download dbx-tada'></i></a>
           </div>
         </div>
         <div class="home-img">
-          <img src="./style/images/personal/avatar.png" alt="">
+          <img src="./style/images/personal/logo-1-removebg-preview.png" alt="" id="home-image">
         </div>
       </section>
-
+     
       <!--End of hero section-->
       <!--Start of ABOUT section-->
       <section class="about" id="about">
@@ -203,7 +200,7 @@
         <h2 class="heading"><span>My </span> Education</h2>
         <div class="education-container">
           <div class="graduation-container">
-            <h2 class="heading"><span>My </span> Degrees</h2>
+            <h2 class="graduation-heading" ><span>My </span> Degrees</h2>
             <div class=" graduation-item">
               <div class="graduation-left">
                 <i class='bx bxs-graduation bx-tada-hover graduation-icon'></i>
@@ -241,7 +238,7 @@
             </div>
           </div>
           <div class="certifications-container">
-            <h2 class="heading"><span>My </span> Certifications</h2>
+            <h2 class="certifications-heading"><span>My </span> Certifications</h2>
             <div class=" certifications-item">
               <div class="certifications-left">
                 <i class='bx bxs-award bx-tada-hover certifications-icon'></i>
@@ -269,7 +266,7 @@
 
       <!-----------------------------------------------------PROJECTS Section------------------------------------------->
       <section class="projects" id="projects">
-        <h2 class="heading">PROJECTS</h2>
+        <h2 class="heading"><span>My </span>PROJECTS</h2>
         <div class="projects-container">
           <!--------------------------------------------Vaporesta Project Section-------------------------------------------->
           <div class="project project-1">
@@ -324,7 +321,7 @@
                     <div class="flip-card">
                       <div class="flip-card-inner">
                         <div class="flip-card-front">
-                          <img class="project-image" src="./style/images/projects/2.webp">
+                          <img class="project-image" src="./style\images\projects\project-1\project-1-1.png">
                         </div>
                         <div class="flip-card-back">
                           <h3>Whoaaa!!!</h3>
@@ -340,7 +337,7 @@
                     <div class="flip-card">
                       <div class="flip-card-inner">
                         <div class="flip-card-front">
-                          <img class="project-image" src="./style/images/projects/3.webp">
+                          <img class="project-image" src="./style\images\projects\project-1\project-1-2.png">
                         </div>
                         <div class="flip-card-back">
                           <h3>Whoaaa!!!</h3>
@@ -355,7 +352,7 @@
                     <div class="flip-card">
                       <div class="flip-card-inner">
                         <div class="flip-card-front">
-                          <img class="project-image" src="./style/images/projects/1.jpg">
+                          <img class="project-image" src="./style\images\projects\project-1\project-1-3.png">
                         </div>
                         <div class="flip-card-back">
                           <h3>Whoaaa!!!</h3>
@@ -420,8 +417,8 @@
                 </div>
               </div>
               <div class="project-btns">
-                <button class="btn">Live demo</button>
-                <button class="btn">view code</button>
+                <button class="btn"><a href="https://chat-app-14ww.onrender.com/" target="_blank" class="btn-link">Live demo</a></button>
+                <button class="btn"> <a href="https://github.com/drsheko/chat-app" target="_blank" class="btn-link">view code</a></button>
               </div>
             </div>
             <div class="slideshow-container">
@@ -431,7 +428,7 @@
                     <div class="flip-card">
                       <div class="flip-card-inner">
                         <div class="flip-card-front">
-                          <img class="project-image" src=".\style\images\projects\project-2-1.png">
+                          <img class="project-image" src=".\style\images\projects\project-2\project-2-1.png">
                         </div>
                         <div class="flip-card-back">
                           <h3>Whoaaa!!!</h3>
@@ -446,7 +443,7 @@
                     <div class="flip-card">
                       <div class="flip-card-inner">
                         <div class="flip-card-front">
-                          <img class="project-image" src=".\style\images\projects\project-2-2.png">
+                          <img class="project-image" src=".\style\images\projects\project-2\project-2-2.png">
                         </div>
                         <div class="flip-card-back">
                           <h3>Whoaaa!!!</h3>
@@ -461,7 +458,7 @@
                     <div class="flip-card">
                       <div class="flip-card-inner">
                         <div class="flip-card-front">
-                          <img class="project-image" src=".\style\images\projects\project-2-3.png">
+                          <img class="project-image" src=".\style\images\projects\project-2\project-2-3.png">
                         </div>
                         <div class="flip-card-back">
                           <h3>Whoaaa!!!</h3>
@@ -505,8 +502,8 @@
                 <p>Javascript</p>
               </div>
               <div class="project-btns">
-                <button class="btn">Live demo</button>
-                <button class="btn">view code</button>
+                <button class="btn"><a href="https://jdbroker.onrender.com/" target="_blank" class="btn-link">Live demo</a></button>
+                <button class="btn"><a href="https://github.com/drsheko/jd-broker" target="_blank" class="btn-link">view code</a></button>
               </div>
             </div>
             <div class="slideshow-container">
@@ -516,7 +513,7 @@
                     <div class="flip-card">
                       <div class="flip-card-inner">
                         <div class="flip-card-front">
-                          <img class="project-image" src=".\style\images\projects\project-3-1.png">
+                          <img class="project-image" src=".\style\images\projects\project-3\project-3-1.png">
                         </div>
                         <div class="flip-card-back">
                           <h3>Whoaaa!!!</h3>
@@ -531,7 +528,7 @@
                     <div class="flip-card">
                       <div class="flip-card-inner">
                         <div class="flip-card-front">
-                          <img class="project-image" src=".\style\images\projects\project-3-2.png">
+                          <img class="project-image" src=".\style\images\projects\project-3\project-3-2.png">
                         </div>
                         <div class="flip-card-back">
                           <h3>Whoaaa!!!</h3>
@@ -546,7 +543,7 @@
                     <div class="flip-card">
                       <div class="flip-card-inner">
                         <div class="flip-card-front">
-                          <img class="project-image" src=".\style\images\projects\project-3-3.png">
+                          <img class="project-image" src=".\style\images\projects\project-3\project-3-3.png">
                         </div>
                         <div class="flip-card-back">
                           <h3>Whoaaa!!!</h3>
@@ -590,8 +587,8 @@
                 <p>Javascript</p>
               </div>
               <div class="project-btns">
-                <button class="btn">Live demo</button>
-                <button class="btn">view code</button>
+                <button class="btn"><a href="https://portfolio-dwlc.onrender.com/" target="_blank" class="btn-link">Live demo</a></button>
+                <button class="btn"><a href="https://github.com/drsheko/portfolio" target="_blank" class="btn-link">view code</a></button>
               </div>
             </div>
             <div class="slideshow-container">
@@ -601,7 +598,7 @@
                     <div class="flip-card">
                       <div class="flip-card-inner">
                         <div class="flip-card-front">
-                          <img class="project-image" src=".\style\images\projects\project-3-1.png">
+                          <img class="project-image" src=".\style\images\projects\project-4\project-4-1.png">
                         </div>
                         <div class="flip-card-back">
                           <h3>Whoaaa!!!</h3>
@@ -616,7 +613,7 @@
                     <div class="flip-card">
                       <div class="flip-card-inner">
                         <div class="flip-card-front">
-                          <img class="project-image" src=".\style\images\projects\project-3-2.png">
+                          <img class="project-image" src=".\style\images\projects\project-4\project-4-2.png">
                         </div>
                         <div class="flip-card-back">
                           <h3>Whoaaa!!!</h3>
@@ -631,7 +628,7 @@
                     <div class="flip-card">
                       <div class="flip-card-inner">
                         <div class="flip-card-front">
-                          <img class="project-image" src=".\style\images\projects\project-3-3.png">
+                          <img class="project-image" src=".\style\images\projects\project-4\project-4-4.png">
                         </div>
                         <div class="flip-card-back">
                           <h3>Whoaaa!!!</h3>

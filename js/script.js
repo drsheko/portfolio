@@ -32,10 +32,27 @@ ScrollReveal().reveal('.heading', {
   distance: '100px',
   duration: 1500,
 })
-ScrollReveal().reveal('.about-img', { opacity: 0, delay: 0, duration: 4500 })
+ScrollReveal().reveal('.heading', {
+  origin: 'top',
+  distance: '100px',
+  duration: 1500,
+})
+ScrollReveal().reveal('.about-left', { origin: 'left',
+  distance: '100px',
+  duration: 2000, })
 ScrollReveal().reveal('.about-right', {
   origin: 'bottom',
   distance: '100px',
+  duration: 1500,
+})
+ScrollReveal().reveal('.graduation-heading', {
+  origin: 'left',
+  distance: '130px',
+  duration: 1500,
+})
+ScrollReveal().reveal('.certifications-heading', {
+  origin: 'right',
+  distance: '150px',
   duration: 1500,
 })
 ScrollReveal().reveal('.contact-info-container', {
@@ -46,14 +63,23 @@ ScrollReveal().reveal('.contact-info-container', {
 })
 
 // Grid animation
-for (let i = 1; i <= 16; i++) {
-  let delay = i * 80
-  // ScrollReveal().reveal('.skills-container div:nth-of-type('+i+')',{  scale:1.3, duration:250, delay:delay,reset:true} );
+/*for (let i = 1; i <= 16; i++) {
+  let delay = i * 980
+   ScrollReveal().reveal('.skills-container div:nth-of-type('+i+')',{  scale:1.3, duration:250, delay:delay,reset:true} );
+}*/
+// Graduation animation
+for (let i = 2; i <= 4; i++) {
+  let delay = i * 180
+   ScrollReveal().reveal('.graduation-container div:nth-of-type('+i+')',{  scale:1.3, duration:250, delay:delay,reset:true} );
 }
-
+// Certifications animation
+for (let i = 2; i <= 3; i++) {
+  let delay = i * 280
+   ScrollReveal().reveal('.certifications-container div:nth-of-type('+i+')',{  scale:1.3, duration:350, delay:delay,reset:true} );
+}
 // =======typed
 var typed = new Typed('.my-text', {
-  strings: ['Web Developer', 'React Developer', 'Full-Stack Developer'],
+  strings: ['Full-Stack Web Developer', 'Front-End Web Developer', 'Back-End Web Developer'],
   startDelay: 1200,
   typeSpeed: 100,
   backSpeed: 100,
@@ -188,11 +214,19 @@ switcherBtn.addEventListener('click', () => {
     // document.documentElement.style.setProperty('--second-bg-color','#F3F8FF');
     document.documentElement.style.setProperty('--second-bg-color', '#E6E6E6')
     document.documentElement.style.setProperty('--text-color', '#354259 ')
+    document.getElementById("home-image").src = "./style/images/personal/logo-2-removebg-preview.png"
+    document.getElementById("sidenavbar-logo").src = "./style/images/personal/light-avatar-left.png"
+
   } else {
     document.documentElement.style.setProperty('--main-color', '#32c766')
-    document.documentElement.style.setProperty('--bg-color', '#1f242d')
-    document.documentElement.style.setProperty('--second-bg-color', '#323946')
+    //document.documentElement.style.setProperty('--bg-color', '#1f242d')
+    document.documentElement.style.setProperty('--bg-color', '#000F17')
+  //  document.documentElement.style.setProperty('--second-bg-color', '#323946')
+    document.documentElement.style.setProperty('--second-bg-color', '#03222D')
     document.documentElement.style.setProperty('--text-color', '#bababa')
+    document.getElementById("home-image").src = "./style/images/personal/logo-1-removebg-preview.png"
+    document.getElementById("sidenavbar-logo").src = "./style/images/personal/dark-avatar-left.png"
+
   }
 })
 
